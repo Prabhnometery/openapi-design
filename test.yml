@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  version: '1.0'
-  title: 'OpenAPI Test'
+  version: "1.0"
+  title: "OpenAPI Test"
   description: Specs for OpenAPI Test
   license:
     name: Apache
@@ -13,4 +13,17 @@ servers:
     description: Production Server
   - url: https://qa.example.com
     description: QA Server
-paths: {}
+paths:
+  /v1/customers:
+    get:
+      responses:
+        "200":
+          description: List of All Customers
+
+  /v1/products:
+    get:
+      responses:
+        "200":
+          description: List of available products
+        "404":
+          description: No products in stock
